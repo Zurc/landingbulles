@@ -12,7 +12,7 @@
 	<div class="container">
 		<div class="row">
 			<div id="box" class="boxx">
-				<h1>Thank you for confirming your attendance!</h1>
+				<h1></h1>
 			</div>
 		</div>
 
@@ -62,11 +62,17 @@
 		$("#datosuser").submit(function() {
 			var username = $("#username").val();
 			var useremail = $("#useremail").val();
+			var box = $(".boxx");
+			var boxh1 = $(".boxx h1");
+
+			 if ( username.length !== 0 && useremail.length !== 0) {
 			
-			alert( username + " " + useremail);
-	
-			
-		})
+				boxh1.html("Thank you " + username + "for confirming your attendance!");
+				box.fadeIn(1000);
+				box.fadeOut(6500);
+				 
+			}
+		});
 	});
 	</script>
 </body>
