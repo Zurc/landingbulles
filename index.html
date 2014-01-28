@@ -45,7 +45,7 @@
 					<div class="blanc">
 						<h3>EVENT INFO</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, rerum, accusamus, molestias similique illum dolores quas fugit voluptas facere magni deserunt maxime? Quasi, autem, impedit, possimus minima ducimus tempora consecteturanimi quae aut molestiae modi quis cumque temporibus non mollitia voluptatum iure eius earum facere quam.</p>
-						<form method="post" action="email.php" name="emails" id="datosuser">
+						<form method="post" action="javascript:function();" name="emails" id="datosuser">
 							<input type="text" id="username" name="username" placeholder="enter your name here" required>
 							<input type="email" id="useremail" name="useremail" placeholder="enter your email here" required>
 							<input type="image" id="confirm" src="imgs/imgoing.png" alt="I'm going">
@@ -56,26 +56,32 @@
 		</div>
 	</div>
 	
-	<script src="js/bootstrap.js"></script>
+	
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<script>
 	$(document).ready(function (){
 
-		$("#datosuser").submit(function() {
-			var username = $("#username").val();
-			var useremail = $("#useremail").val();
-			var box = $(".boxx");
-			var boxh1 = $(".boxx h1");
+           $("#datosuser").submit(function() {
+                   var username = $("#username").val();
+                   var useremail = $("#useremail").val();
+                   var box = $(".boxx");
+                   var boxh1 = $(".boxx h1");
 
-			 if ( username.length !== 0 && useremail.length !== 0) {
+                   $.ajax({
+                       type: "POST",
+                       url:"email.php",
+                       data: {username: username, useremail: useremail}
+                   });
 
-				boxh1.html("Thank you " + username + " for confirming your attendance!");
-				box.fadeIn(1000);
-				box.fadeOut(6500);
-				 
-			}
-		});
-	});
+                   if (username.length !== 0 && useremail.length !== 0) {
+                           boxh1.html("Thank you " + username + " for confirming your attendance!");
+                           box.fadeIn(1000);
+                           box.fadeOut(6500);         
+                   }
+           });
+   });
 	</script>
+	
 </body>
 </html>

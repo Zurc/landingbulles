@@ -1,14 +1,18 @@
-<? 
+<?php 
 
-$para = "cruzjurado@gmail.com";
-$nombre = $_POST["username"];
-$subject = "Enviado por ".$nombre." desde Bulles d'Or Landing Page";
-$message = "Hola!, ".$_POST["username"]." ha confirmado su presencia para el evento. Su email es ".$_POST["useremail"];
-$de = $_POST["useremail"];
+$to  = 'pastorjt@gmail.com' . ', '; // note the comma
+$to .= 'cruzjurado@gmail.com';
 
-$headers = "MIME-Version:1.0; \r\n";
-$headers .= "Content-type: text/html; \r\n charset=utf-8";
-$headers .= "From: $de \r\n";
-$headers .= "To: $para; \r\n Subject:$subject \r\n";
+$name = $_REQUEST["username"];
+$mail = $_REQUEST["useremail"];
+
+$subject = "Enviado por $name ";
+$subject .= " desde Bulles d'Or Landing Page";
+$message = "Hola!, $name";
+$message .= " ha confirmado su presencia para el evento. Su email es $mail" ;
+$message .= ".";
+
+
+mail($to, $subject, $message, "From: " . $_REQUEST["useremail"]);
 
 ?>
