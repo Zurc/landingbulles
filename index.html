@@ -43,7 +43,7 @@
 					<div class="blanc">
 						<h3>EVENT INFO</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, rerum, accusamus, molestias similique illum dolores quas fugit voluptas facere magni deserunt maxime? Quasi, autem, impedit, possimus minima ducimus tempora consecteturanimi quae aut molestiae modi quis cumque temporibus non mollitia voluptatum iure eius earum facere quam.</p>
-						<form method="post" action="javascript: popbox();" name="emails">
+						<form method="post" action="javascript: popbox();" name="emails" id="datosuser">
 							<input type="text" id="username" placeholder="enter your name here" required>
 							<input type="email" id="useremail" placeholder="enter your email here" required>
 							<input type="image" id="confirm" src="imgs/imgoing.png" alt="I'm going">
@@ -57,15 +57,16 @@
 	<script src="js/bootstrap.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script>
-	$(document).ready(function popbox(){
-		// var $username = $("#username");
-		// var $useremail = $("#useremail");
+	$(document).ready(function (){
 
-		if ( $(".required input").val() !== '') {
-			$("#confirm").click(function(){
-				$(".boxx").fadeIn(1000);
-				$(".boxx").fadeOut(6500);
-		});
+		$("#datosuser").submit(function() {
+			var username = $("#username").val();
+			var useremail = $("#useremail").val();
+			
+			alert( username + " " + useremail);
+	
+			
+		})
 	});
 	</script>
 </body>
