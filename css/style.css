@@ -72,6 +72,10 @@ h3 {
 
 @media screen and (max-width: 767px){
 
+p {
+	font-size: 1.5em;
+}
+
 .gh, .details {
 	text-align: center;
 }
@@ -91,6 +95,16 @@ input#username, input#useremail {
 }
 
 .mar {
+	font-size: 1.5em;
+}
+
+.boxx {
+	padding: 2em;
+	top: 61em;
+	left: 0;
+}
+
+.boxx h1 {
 	font-size: 1.5em;
 }
 

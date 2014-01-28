@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+
 	<title>Bulles d'Or</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -11,7 +13,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div id="box" class="boxx">
+			<div class="col-xs-12 col-sm-6 col-sm-offset-2 col-md-6 col-md-offset-2 col-lg-6 col-lg-offset-2 boxx">
 				<h1></h1>
 			</div>
 		</div>
@@ -43,9 +45,9 @@
 					<div class="blanc">
 						<h3>EVENT INFO</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, rerum, accusamus, molestias similique illum dolores quas fugit voluptas facere magni deserunt maxime? Quasi, autem, impedit, possimus minima ducimus tempora consecteturanimi quae aut molestiae modi quis cumque temporibus non mollitia voluptatum iure eius earum facere quam.</p>
-						<form method="post" action="javascript: popbox();" name="emails" id="datosuser">
-							<input type="text" id="username" placeholder="enter your name here" required>
-							<input type="email" id="useremail" placeholder="enter your email here" required>
+						<form method="post" action="email.php" name="emails" id="datosuser">
+							<input type="text" id="username" name="username" placeholder="enter your name here" required>
+							<input type="email" id="useremail" name="useremail" placeholder="enter your email here" required>
 							<input type="image" id="confirm" src="imgs/imgoing.png" alt="I'm going">
 						</form>
 					</div>
@@ -66,8 +68,8 @@
 			var boxh1 = $(".boxx h1");
 
 			 if ( username.length !== 0 && useremail.length !== 0) {
-			
-				boxh1.html("Thank you " + username + "for confirming your attendance!");
+				
+				boxh1.html("Thank you " + username + " for confirming your attendance!");
 				box.fadeIn(1000);
 				box.fadeOut(6500);
 				 
