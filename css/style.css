@@ -1,0 +1,98 @@
+body {
+	background-color: #d8ba95;
+}
+
+.container {
+	max-width: 1080px;
+}
+
+.dosnueve, .mar, .info p {
+	color: #888;
+}
+
+.dosnueve {
+	font-size: 5em;
+	margin-bottom: -0.2em;
+	padding-left: 0.2em;
+}
+
+.mar {
+	font-size: 2.5em;
+	padding-left: 0.4em;
+}
+
+h1 {
+	font-size: 3em;
+} 
+
+.info h1 {
+	font-size: 2em;
+	color: red;
+}
+
+h3 {
+	margin-top: 0;
+}
+
+.boxx {
+	display: none;
+	z-index: 9;
+	background-color: #e3e3e3;
+	padding: 50px;
+	position: absolute;
+	top: 25em;
+	left: 10em;
+}
+
+.church img{
+	width: 100%;
+}
+
+.gh {
+	font-family: 'Grand Hotel', cursive;
+	color: #fff;
+}
+
+.container .event {
+	position: relative;
+	top: -250px;
+	z-index: 2;
+}
+
+.info {
+	background-color: #eee;
+	clear: both;
+
+}
+
+.blanc {
+	background-color: #fff;
+	padding: 1em 2em 0.5em 2em;
+}
+
+@media screen and (max-width: 767px){
+
+.gh, .details {
+	text-align: center;
+}
+
+.container .event {
+	position: relative;
+	top: 0;
+}
+
+input#username, input#useremail {
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+.dosnueve {
+	font-size: 3em;
+}
+
+.mar {
+	font-size: 1.5em;
+}
+
+}
+

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bulles d'Or</title>
+	<link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div id="box" class="boxx">
+				<h1>Thank you for confirming your attendance!</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-8 col-md-8 col-lg-8 church">
+				<img src="imgs/all_saints.jpg" class="img-responsive img-rounded" alt="All Saints' Church">
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4">
+				<h1 class="gh">Bulles d'Or</h1>
+			</div>
+		</div>
+
+		<div class="row event">
+			<div class="col-sm-8 col-sm-offset-4 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4">
+				<div class="row info">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						<div class="dosnueve">29</div>
+						<div class="mar">MAR</div>
+					</div>
+					<div class="details col-sm-9 col-md-9 col-lg-9">
+						<h1>BOUTIQUE PER TOMMIES<br>OPENING PARTY</h1>
+						<p>Sat, March 29th, 2014, at 5pm</p>
+						<p>All Saints' Church, Blackheath<br>London SE3 0TY</p>
+					</div>
+					<hr>
+				</div>
+				<div class="row">
+					<div class="blanc">
+						<h3>EVENT INFO</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, rerum, accusamus, molestias similique illum dolores quas fugit voluptas facere magni deserunt maxime? Quasi, autem, impedit, possimus minima ducimus tempora consecteturanimi quae aut molestiae modi quis cumque temporibus non mollitia voluptatum iure eius earum facere quam.</p>
+						<form method="post" action="javascript: popbox();" name="emails">
+							<input type="text" id="username" placeholder="enter your name here" required>
+							<input type="email" id="useremail" placeholder="enter your email here" required>
+							<input type="image" id="confirm" src="imgs/imgoing.png" alt="I'm going">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/bootstrap.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script>
+	$(document).ready(function popbox(){
+		// var $username = $("#username");
+		// var $useremail = $("#useremail");
+
+		if ( $(".required input").val() !== '') {
+			$("#confirm").click(function(){
+				$(".boxx").fadeIn(1000);
+				$(".boxx").fadeOut(6500);
+		});
+	});
+	</script>
+</body>
+</html>
